@@ -14,3 +14,28 @@ category: news
 <li>-------------------------------------------------------------------------------------</li>
 
 
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">#include</span> <span class="o">&lt;</span><span class="nt">iostream</span><span class="o">&gt;</span>
+<span class="nf">#include</span> <span class="o">&lt;</span><span class="nt">typeinfo</span><span class="o">&gt;</span>
+
+<span class="nt">class</span> <span class="nt">myTypeA</span><span class="p">{}</span><span class="o">;</span>
+<span class="nt">class</span> <span class="nt">myTypeB</span> <span class="o">:</span> <span class="nt">public</span> <span class="nt">myTypeA</span> <span class="p">{}</span><span class="o">;</span>
+<span class="nt">class</span> <span class="nt">myTypeC</span> <span class="o">:</span> <span class="nt">public</span> <span class="nt">myTypeB</span> <span class="p">{}</span><span class="o">;</span>
+
+<span class="nt">int</span> <span class="nt">main</span><span class="o">()</span> <span class="p">{</span>
+    <span class="err">myTypeA</span> <span class="err">*obj1</span> <span class="err">=</span> <span class="err">new</span> <span class="err">myTypeA;</span>
+    <span class="err">myTypeA</span> <span class="err">*obj2</span> <span class="err">=</span> <span class="err">new</span> <span class="err">myTypeB;</span>
+    <span class="err">myTypeA</span> <span class="err">*obj3</span> <span class="err">=</span> <span class="err">new</span> <span class="err">myTypeC;</span>
+
+    <span class="err">myTypeB</span> <span class="err">*obj4</span> <span class="err">=</span> <span class="err">new</span> <span class="err">myTypeB;</span>
+    <span class="err">myTypeB</span> <span class="err">*obj5</span> <span class="err">=</span> <span class="err">new</span> <span class="err">myTypeC;</span>
+
+    <span class="err">myTypeC</span> <span class="err">*obj6</span> <span class="err">=</span> <span class="err">new</span> <span class="err">myTypeC;</span>
+
+    <span class="py">std</span><span class="p">::</span><span class="n">cout</span> <span class="err">&lt;&lt;</span> <span class="n">typeid</span><span class="p">(</span><span class="n">obj1</span><span class="p">).</span><span class="n">name</span><span class="p">();</span>
+    <span class="py">std</span><span class="p">::</span><span class="n">cout</span> <span class="err">&lt;&lt;</span> <span class="n">typeid</span><span class="p">(</span><span class="n">obj2</span><span class="p">).</span><span class="n">name</span><span class="p">();</span>
+    <span class="py">std</span><span class="p">::</span><span class="n">cout</span> <span class="err">&lt;&lt;</span> <span class="n">typeid</span><span class="p">(</span><span class="n">obj3</span><span class="p">).</span><span class="n">name</span><span class="p">();</span>
+    <span class="py">std</span><span class="p">::</span><span class="n">cout</span> <span class="err">&lt;&lt;</span> <span class="n">typeid</span><span class="p">(</span><span class="n">obj4</span><span class="p">).</span><span class="n">name</span><span class="p">();</span>
+    <span class="py">std</span><span class="p">::</span><span class="n">cout</span> <span class="err">&lt;&lt;</span> <span class="n">typeid</span><span class="p">(</span><span class="n">obj5</span><span class="p">).</span><span class="n">name</span><span class="p">();</span>
+    <span class="py">std</span><span class="p">::</span><span class="n">cout</span> <span class="err">&lt;&lt;</span> <span class="n">typeid</span><span class="p">(</span><span class="n">obj6</span><span class="p">).</span><span class="n">name</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
